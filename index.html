@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alnidal Res 6 | Home</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -10,24 +11,66 @@
 <body>
     <nav>
         <a href="/index.html" class="logo">ALNIDAL RES 6</a>
-        <div class="nav-links">
-            <a href="/index.html">Home</a><a href="/roof.html">Roof</a><a href="/typical.html">Typical</a><a href="/ground.html">Ground</a><a href="/basement.html">Basement</a>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="nav-list">
+            <a href="/index.html">Home</a>
+            <a href="/roof.html">Roof</a>
+            <a href="/typical.html">Typical Floor</a>
+            <a href="/ground.html">Ground Floor</a>
+            <a href="/basement.html">Basement</a>
         </div>
     </nav>
+
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"></div>
             <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"></div>
         </div>
-        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+        <div class="swiper-button-next" style="color: #c5a059"></div>
+        <div class="swiper-button-prev" style="color: #c5a059"></div>
     </div>
+
     <div class="main-content">
         <h1>Alnidal Res 6 - Home</h1>
-        <div class="info-section"><h3>Luxury Landmark</h3><p>Experience urban elegance and modern architectural mastery.</p></div>
-        <h2>Description</h2><p>Alnidal Res 6 offers premium finishing and high-end security, setting a new standard for luxury living.</p>
+        <div class="info-section">
+            <h3>Luxury Living</h3>
+            <p>Modern architectural mastery in the heart of the city.</p>
+        </div>
+        <h2>Description</h2>
+        <p>Premium finishing and high-end security, setting a new standard for luxury residences.</p>
     </div>
-    <footer><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/9715000000"><i class="fab fa-whatsapp"></i></a></div><a href="tel:+9715000000" class="contact-link">+971 50 000 0000</a></footer>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/9715000000"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <a href="tel:+9715000000" class="contact-link">+971 50 000 0000</a>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>var swiper = new Swiper(".mySwiper", { navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, autoplay: { delay: 3000 }, loop: true });</script>
+    <script>
+        // تشغيل السلايدر
+        var swiper = new Swiper(".mySwiper", { 
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, 
+            autoplay: { delay: 3000 }, 
+            loop: true 
+        });
+
+        // تشغيل القائمة الجانبية للجوال
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
