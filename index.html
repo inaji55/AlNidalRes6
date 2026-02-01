@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Detail | Luxury Apartment Dubai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pf-red: #ef5e4e;
+            --pf-blue: #007ab9;
+            --text-dark: #2d383f;
+            --text-light: #67737e;
+            --border: #dce0e0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background-color: #f4f7f8;
+            color: var(--text-dark);
+            direction: ltr;
+        }
+
+        header {
+            background: white;
+            padding: 15px 5%;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery-container {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 400px;
+            gap: 8px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .main-img { background: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200') center/cover; }
+        .side-imgs { display: grid; grid-template-rows: 1fr 1fr; gap: 8px; }
+        .img-2 { background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600') center/cover; }
+        .img-3 { background: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=600') center/cover; }
+
+        /* Left Column Details */
+        .details-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .price { font-size: 32px; font-weight: 700; color: var(--text-dark); }
+        .location { color: var(--text-light); margin: 10px 0; font-size: 16px; }
+
+        .amenities-bar {
+            display: flex;
+            gap: 25px;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 20px 0;
+        }
+
+        .amenity { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+
+        /* Sidebar Agent Card */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .agent-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            position: sticky;
+            top: 20px;
+        }
+
+        .agent-photo {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: #eee url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png') center/cover;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 12px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .btn-call { background: var(--pf-red); color: white; }
+        .btn-wa { border: 2px solid #25D366; color: #25D366; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .container { grid-template-columns: 1fr; }
+            .gallery-container { grid-template-columns: 1fr; height: 300px; }
+            .side-imgs { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="font-weight: bold; font-size: 24px; color: var(--pf-red);">PropertyFinderClone</div>
+    <nav>Buy | Rent | Commercial</nav>
+</header>
+
+<div class="container">
+    <div class="gallery-container">
+        <div class="main-img"></div>
+        <div class="side-imgs">
+            <div class="img-2"></div>
+            <div class="img-3"></div>
+        </div>
+    </div>
+
+    <div class="details-card">
+        <div class="price">AED 1,350,000</div>
+        <h1 style="margin: 10px 0;">Luxury 2BR Apartment | Azizi Riviera | Beachfront</h1>
+        <div class="location">📍 Meydan One, Meydan, Dubai</div>
+
+        <div class="amenities-bar">
+            <div class="amenity">🛏️ 2 Beds</div>
+            <div class="amenity">🚿 2 Baths</div>
+            <div class="amenity">📐 1,120 sqft</div>
+        </div>
+
+        <h3>Description</h3>
+        <p style="line-height: 1.8; color: #444;">
+            This premium apartment offers crystal lagoon views, modern finishes, and access to a vibrant community. 
+            Located in the heart of Meydan, it features world-class amenities including a swimming pool, gym, and retail outlets.
+        </p>
+    </div>
+
+    <div class="sidebar">
+        <div class="agent-card">
+            <div class="agent-photo"></div>
+            <div style="font-weight: bold; font-size: 18px;">John Doe</div>
+            <div style="color: var(--text-light); margin-bottom: 20px;">Elite Realty Dubai</div>
+            
+            <a href="tel:+971000000" class="btn btn-call">Call Agent</a>
+            <a href="https://wa.me/971000000" class="btn btn-wa">WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
