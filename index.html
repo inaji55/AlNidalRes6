@@ -2,236 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alnidal Res 6 | Premium Living</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Alnidal Res 6 | Home</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <style>
-        :root {
-            --accent: #d4af37; /* Luxury Gold */
-            --dark: #121212;
-            --grey: #2a2a2a;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            background: var(--dark);
-            color: var(--white);
-            overflow-x: hidden;
-        }
-
-        /* Responsive Navigation */
-        nav {
-            background: rgba(18, 18, 18, 0.95);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--grey);
-        }
-
-        .logo { color: var(--accent); font-weight: 700; font-size: 1.4rem; text-decoration: none; }
-
-        .nav-links { display: flex; gap: 15px; }
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-        }
-
-        /* Carousel Section */
-        .swiper { width: 100%; height: 60vh; }
-        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Content Sections */
-        .content-container {
-            max-width: 900px;
-            margin: -50px auto 0;
-            position: relative;
-            z-index: 10;
-            background: var(--grey);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-
-        h1 { color: var(--accent); margin-top: 0; }
-        .info-box { border-left: 3px solid var(--accent); padding-left: 20px; margin: 30px 0; }
-        p { line-height: 1.8; color: #ccc; }
-
-        /* Footer */
-        footer {
-            padding: 60px 5%;
-            background: #0a0a0a;
-            text-align: center;
-            border-top: 1px solid var(--grey);
-        }
-
-        .social-wrap { margin: 25px 0; }
-        .social-wrap a {
-            color: var(--white);
-            font-size: 1.8rem;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-        .social-wrap a:hover { color: var(--accent); }
-
-        .contact-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--accent);
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
-            .nav-links a { font-size: 0.7rem; }
-            .content-container { margin: 20px; padding: 25px; }
-            .swiper { height: 40vh; }
-        }
-    </style>
 </head>
 <body>
-
-<nav>
-    <a href="#" class="logo">ALNIDAL RES 6</a>
-    <div class="nav-links">
-        <a onclick="updateContent('home')">Home</a>
-        <a onclick="updateContent('roof')">Roof</a>
-        <a onclick="updateContent('typical')">Typical</a>
-        <a onclick="updateContent('ground')">Ground</a>
-        <a onclick="updateContent('basement')">Basement</a>
-    </div>
-</nav>
-
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper" id="carousel-images">
+    <nav>
+        <a href="index.html" class="logo">ALNIDAL RES 6</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="roof.html">Roof</a>
+            <a href="typical.html">Typical Floor</a>
+            <a href="ground.html">Ground Floor</a>
+            <a href="basement.html">Basement</a>
         </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next" style="color: var(--accent)"></div>
-    <div class="swiper-button-prev" style="color: var(--accent)"></div>
-</div>
+    </nav>
 
-<div class="content-container">
-    <div id="page-data">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200"></div>
+            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"></div>
         </div>
-</div>
-
-<footer>
-    <h2>Alnidal Res 6</h2>
-    <p>Luxury Residential Excellence in Every Square Meter.</p>
-    <div class="social-wrap">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/971000000"><i class="fab fa-whatsapp"></i></a>
+        <div class="swiper-button-next" style="color: #c5a059"></div>
+        <div class="swiper-button-prev" style="color: #c5a059"></div>
     </div>
-    <a href="tel:+971000000" class="contact-link">+971 50 123 4567</a>
-    <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.5;">&copy; 2026 Alnidal Real Estate. Professional Site Build.</p>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    const siteData = {
-        home: {
-            title: "Alnidal Res 6 - Main",
-            about: "The pinnacle of urban luxury and modern living.",
-            description: "A state-of-the-art building designed with a focus on natural light, premium materials, and community safety.",
-            images: [
-                "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200",
-                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"
-            ]
-        },
-        roof: {
-            title: "The Roof Terrace",
-            about: "Sky-high amenities with breathtaking views.",
-            description: "The roof features a communal garden, infinity pool, and the building's most exclusive penthouse suites.",
-            images: [
-                "https://images.unsplash.com/photo-1531835551805-16d864c8d311?q=80&w=1200",
-                "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200"
-            ]
-        },
-        typical: {
-            title: "Typical Floor (1-5)",
-            about: "Elegant 2 & 3 bedroom configurations.",
-            description: "Standard floors boast high ceilings and open-plan kitchens, ensuring a sense of space and tranquility.",
-            images: [
-                "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200",
-                "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200"
-            ]
-        },
-        ground: {
-            title: "Ground Floor",
-            about: "Grand Lobby and Commercial Space.",
-            description: "Welcoming residents with 24/7 concierge and direct access to high-end retail shops and cafes.",
-            images: [
-                "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200",
-                "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=80&w=1200"
-            ]
-        },
-        basement: {
-            title: "Basement Level",
-            about: "Secure underground facilities.",
-            description: "Features smart parking systems, EV charging stations, and extra storage lockers for all units.",
-            images: [
-                "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200",
-                "https://images.unsplash.com/photo-1590674867551-11c3a2df5bb8?q=80&w=1200"
-            ]
-        }
-    };
+    <div class="main-content">
+        <h1>Alnidal Res 6 - Main Entrance</h1>
+        <div class="info-section">
+            <h3>About Alnidal Res 6</h3>
+            <p>A flagship residential landmark in the heart of the city, blending architectural elegance with modern luxury.</p>
+        </div>
+        <h2>Description</h2>
+        <p>Alnidal Res 6 is designed for families and professionals seeking an upscale lifestyle. With premium finishing and high-end security, this project sets a new standard for urban living.</p>
+    </div>
 
-    let swiper;
+    <footer>
+        <h2>Contact Us</h2>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/9715000000"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <a href="tel:+9715000000" class="contact-link">+971 50 000 0000</a>
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Alnidal Real Estate. All Rights Reserved.</p>
+    </footer>
 
-    function initSwiper() {
-        if (swiper) swiper.destroy();
-        swiper = new Swiper(".mySwiper", {
-            pagination: { el: ".swiper-pagination", clickable: true },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-            autoplay: { delay: 3000 },
-            loop: true
-        });
-    }
-
-    function updateContent(page) {
-        const data = siteData[page];
-        
-        // Update Carousel Images
-        const imgWrapper = document.getElementById('carousel-images');
-        imgWrapper.innerHTML = data.images.map(img => `
-            <div class="swiper-slide"><img src="${img}" alt="Alnidal"></div>
-        `).join('');
-
-        // Update Text Content
-        document.getElementById('page-data').innerHTML = `
-            <h1>${data.title}</h1>
-            <div class="info-box">
-                <h3>About</h3>
-                <p>${data.about}</p>
-            </div>
-            <h3>Detailed Description</h3>
-            <p>${data.description}</p>
-        `;
-
-        initSwiper();
-        window.scrollTo(0, 0);
-    }
-
-    // Initialize with Home
-    updateContent('home');
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", { navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, autoplay: { delay: 3000 }, loop: true });
+    </script>
 </body>
 </html>
