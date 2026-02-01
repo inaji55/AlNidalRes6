@@ -3,173 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Detail | Luxury Apartment Dubai</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>Alnidal Res 6 | Luxury Living</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --pf-red: #ef5e4e;
-            --pf-blue: #007ab9;
-            --text-dark: #2d383f;
-            --text-light: #67737e;
-            --border: #dce0e0;
+            --gold: #c5a059;
+            --dark: #1a1a1a;
+            --light: #f9f9f9;
+            --white: #ffffff;
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            background-color: #f4f7f8;
-            color: var(--text-dark);
-            direction: ltr;
+            background-color: var(--light);
+            color: var(--dark);
+            scroll-behavior: smooth;
         }
 
-        header {
-            background: white;
-            padding: 15px 5%;
-            border-bottom: 1px solid var(--border);
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
+        .logo { color: var(--gold); font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            cursor: pointer;
         }
 
-        /* Gallery Grid */
-        .gallery-container {
-            grid-column: span 2;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 400px;
-            gap: 8px;
-            border-radius: 12px;
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Hero / Carousel Placeholder */
+        .carousel {
+            width: 100%;
+            height: 500px;
+            background: #333;
+            position: relative;
             overflow: hidden;
-            margin-bottom: 10px;
-        }
-
-        .main-img { background: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200') center/cover; }
-        .side-imgs { display: grid; grid-template-rows: 1fr 1fr; gap: 8px; }
-        .img-2 { background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600') center/cover; }
-        .img-3 { background: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=600') center/cover; }
-
-        /* Left Column Details */
-        .details-card {
-            background: white;
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .price { font-size: 32px; font-weight: 700; color: var(--text-dark); }
-        .location { color: var(--text-light); margin: 10px 0; font-size: 16px; }
-
-        .amenities-bar {
             display: flex;
-            gap: 25px;
-            padding: 20px 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            transition: 0.5s;
+        }
+
+        .carousel-overlay {
+            background: rgba(0,0,0,0.5);
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Content Sections */
+        .section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--gold); border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+
+        .description { line-height: 1.8; color: #555; font-size: 1.1rem; }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             margin: 20px 0;
         }
 
-        .amenity { display: flex; align-items: center; gap: 8px; font-weight: 600; }
-
-        /* Sidebar Agent Card */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .social-icons a {
+            color: var(--white);
+            font-size: 2rem;
+            transition: 0.3s;
         }
 
-        .agent-card {
-            background: white;
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            position: sticky;
-            top: 20px;
-        }
+        .social-icons .fa-facebook:hover { color: #1877F2; }
+        .social-icons .fa-whatsapp:hover { color: #25D366; }
+        .social-icons .fa-instagram:hover { color: #E4405F; }
 
-        .agent-photo {
-            width: 80px; height: 80px;
-            border-radius: 50%;
-            background: #eee url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png') center/cover;
-            margin-bottom: 15px;
-        }
+        .contact-number { font-size: 1.2rem; margin-top: 10px; display: block; color: var(--gold); text-decoration: none;}
 
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            margin-top: 12px;
-            border-radius: 8px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            box-sizing: border-box;
-        }
-
-        .btn-call { background: var(--pf-red); color: white; }
-        .btn-wa { border: 2px solid #25D366; color: #25D366; }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .container { grid-template-columns: 1fr; }
-            .gallery-container { grid-template-columns: 1fr; height: 300px; }
-            .side-imgs { display: none; }
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for demo */
+            .carousel { height: 300px; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div style="font-weight: bold; font-size: 24px; color: var(--pf-red);">PropertyFinderClone</div>
-    <nav>Buy | Rent | Commercial</nav>
-</header>
+<nav>
+    <a href="#" class="logo" onclick="showPage('home')">ALNIDAL RES 6</a>
+    <div class="nav-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('roof')">Roof</a>
+        <a onclick="showPage('typical')">Typical Floor</a>
+        <a onclick="showPage('ground')">Ground Floor</a>
+        <a onclick="showPage('basement')">Basement</a>
+    </div>
+</nav>
 
-<div class="container">
-    <div class="gallery-container">
-        <div class="main-img"></div>
-        <div class="side-imgs">
-            <div class="img-2"></div>
-            <div class="img-3"></div>
-        </div>
+<div id="page-content">
     </div>
 
-    <div class="details-card">
-        <div class="price">AED 1,350,000</div>
-        <h1 style="margin: 10px 0;">Luxury 2BR Apartment | Azizi Riviera | Beachfront</h1>
-        <div class="location">📍 Meydan One, Meydan, Dubai</div>
-
-        <div class="amenities-bar">
-            <div class="amenity">🛏️ 2 Beds</div>
-            <div class="amenity">🚿 2 Baths</div>
-            <div class="amenity">📐 1,120 sqft</div>
-        </div>
-
-        <h3>Description</h3>
-        <p style="line-height: 1.8; color: #444;">
-            This premium apartment offers crystal lagoon views, modern finishes, and access to a vibrant community. 
-            Located in the heart of Meydan, it features world-class amenities including a swimming pool, gym, and retail outlets.
-        </p>
+<footer>
+    <h3>Contact Us - Alnidal Res 6</h3>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/9710000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
+    <a href="tel:+9710000000" class="contact-number">+971 50 000 0000</a>
+    <p>&copy; 2026 Alnidal Real Estate. All Rights Reserved.</p>
+</footer>
 
-    <div class="sidebar">
-        <div class="agent-card">
-            <div class="agent-photo"></div>
-            <div style="font-weight: bold; font-size: 18px;">John Doe</div>
-            <div style="color: var(--text-light); margin-bottom: 20px;">Elite Realty Dubai</div>
-            
-            <a href="tel:+971000000" class="btn btn-call">Call Agent</a>
-            <a href="https://wa.me/971000000" class="btn btn-wa">WhatsApp</a>
-        </div>
-    </div>
-</div>
+<script>
+    const pages = {
+        home: {
+            title: "Welcome to Alnidal Res 6",
+            img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
+            about: "Experience modern luxury in the heart of the city.",
+            desc: "Alnidal Res 6 is a flagship residential project offering world-class architecture and premium comfort. Designed for families and professionals alike."
+        },
+        roof: {
+            title: "The Penthouse & Roof Terrace",
+            img: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200",
+            about: "Life at the top with panoramic views.",
+            desc: "Our Roof level features luxury penthouses with private garden access and a 360-degree view of the skyline. Includes BBQ areas and private lounges."
+        },
+        typical: {
+            title: "Typical Floor Plans",
+            img: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200",
+            about: "Efficient design meets elegant finishing.",
+            desc: "Floors 1 through 5 offer spacious 2 and 3-bedroom apartments. Each unit features floor-to-ceiling windows and high-end Italian marble flooring."
+        },
+        ground: {
+            title: "Ground Floor & Lobby",
+            img: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200",
+            about: "A grand entrance for a grand life.",
+            desc: "The ground floor hosts our 5-star concierge lobby, retail boutiques, and a high-end cafe. It serves as the secure heartbeat of the building."
+        },
+        basement: {
+            title: "Basement & Parking",
+            img: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1200",
+            about: "Safe, secure, and spacious.",
+            desc: "Two levels of underground parking with EV charging stations, 24/7 security surveillance, and climate-controlled storage units for residents."
+        }
+    };
+
+    function showPage(pageKey) {
+        const page = pages[pageKey];
+        const content = `
+            <div class="carousel" style="background-image: url('${page.img}')">
+                <div class="carousel-overlay">
+                    <h1 style="font-size: 3rem; margin: 0;">${page.title}</h1>
+                </div>
+            </div>
+            <div class="section">
+                <h2>About this Level</h2>
+                <p class="description"><strong>${page.about}</strong></p>
+                <h2>Description</h2>
+                <p class="description">${page.desc}</p>
+            </div>
+        `;
+        document.getElementById('page-content').innerHTML = content;
+        window.scrollTo(0,0);
+    }
+
+    // Load home by default
+    showPage('home');
+</script>
 
 </body>
 </html>
