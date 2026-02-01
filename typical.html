@@ -3,29 +3,18 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alnidal Res 6 | Typical Floor</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav>
-        <a href="/index.html" class="logo">ALNIDAL RES 6</a>
-        <div class="nav-links">
-            <a href="/index.html">Home</a><a href="/roof.html">Roof</a><a href="/typical.html">Typical</a><a href="/ground.html">Ground</a><a href="/basement.html">Basement</a>
-        </div>
+    <nav><a href="./index.html" class="logo">ALNIDAL RES 6</a><div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+        <div class="nav-links" id="nav-list"><a href="./index.html">Home</a><a href="./roof.html">Roof</a><a href="./typical.html">Typical</a><a href="./ground.html">Ground</a><a href="./basement.html">Basement</a></div>
     </nav>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200"></div>
-        </div>
-    </div>
+    <div class="swiper mySwiper"><div class="swiper-wrapper"><div class="swiper-slide"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200"></div></div></div>
     <div class="main-content">
-        <h1>Typical Floor Plans</h1>
-        <div class="info-section"><h3>Smart Design</h3><p>Efficiently designed apartments with premium finishing.</p></div>
-        <h2>Description</h2><p>Floors 1-5 maximize natural light with floor-to-ceiling windows and Italian marble flooring.</p>
+        <h1>Typical Floors</h1>
+        <div class="info-section"><h3>Spacious Layouts</h3><p>Thoughtfully designed 2 and 3-bedroom configurations.</p></div>
+        <p>Every unit features Italian marble flooring and floor-to-ceiling windows.</p>
     </div>
-    <footer><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/9715000000"><i class="fab fa-whatsapp"></i></a></div><a href="tel:+9715000000" class="contact-link">+971 50 000 0000</a></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>var swiper = new Swiper(".mySwiper", { navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, autoplay: { delay: 3000 }, loop: true });</script>
+    <script>const menuToggle = document.getElementById('mobile-menu'); const navList = document.getElementById('nav-list'); menuToggle.addEventListener('click', () => { navList.classList.toggle('active'); });</script>
 </body>
 </html>
